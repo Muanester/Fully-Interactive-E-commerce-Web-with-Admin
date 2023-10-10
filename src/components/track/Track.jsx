@@ -36,10 +36,10 @@ function Track() {
                   className="title-font font-medium text-lg text-gray-900"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  Premium Tshirts
+                  Premium Products
                 </h2>
                 <p className="leading-relaxed">
-                  Our T-Shirts are 100% made of cotton.
+                  Our Products are 100% premium.
                 </p>
               </div>
             </div>
@@ -70,11 +70,9 @@ function Track() {
                   className="title-font font-medium text-lg text-gray-900"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  Free Shipping
+                  Country-wide Shipping
                 </h2>
-                <p className="leading-relaxed">
-                  We ship all over India for FREE.
-                </p>
+                <p className="leading-relaxed">We ship all over Kenya.</p>
               </div>
             </div>
             <div className="p-4 md:w-1/3 sm:w-1/2 w-full">
@@ -96,7 +94,7 @@ function Track() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M11.174,14.993h1.647c0.228,0,0.412-0.184,0.412-0.411v-1.648c0-0.228-0.185-0.411-0.412-0.411h-1.647c-0.227,0-0.412,0.184-0.412,0.411v1.648C10.762,14.81,10.947,14.993,11.174,14.993 M3.759,13.346h4.943c0.227,0,0.412-0.184,0.412-0.412c0-0.228-0.185-0.411-0.412-0.411H3.759c-0.227,0-0.412,0.184-0.412,0.411C3.347,13.162,3.532,13.346,3.759,13.346 M3.759,14.993h3.295c0.228,0,0.412-0.184,0.412-0.411S7.282,14.17,7.055,14.17H3.759c-0.227,0-0.412,0.185-0.412,0.412S3.532,14.993,3.759,14.993 M14.881,5.932H1.7c-0.455,0-0.824,0.369-0.824,0.824v9.886c0,0.454,0.369,0.823,0.824,0.823h13.181c0.455,0,0.823-0.369,0.823-0.823V6.755C15.704,6.301,15.336,5.932,14.881,5.932M14.881,16.642H1.7v-5.767h13.181V16.642z M14.881,8.403H1.7V6.755h13.181V8.403z M18.176,2.636H4.995c-0.455,0-0.824,0.37-0.824,0.824v1.236c0,0.228,0.185,0.412,0.412,0.412c0.228,0,0.412-0.184,0.412-0.412V3.46h13.181v9.886H16.94c-0.228,0-0.412,0.185-0.412,0.412s0.185,0.412,0.412,0.412h1.235c0.455,0,0.824-0.369,0.824-0.824V3.46C19,3.006,18.631,2.636,18.176,2.636"
                   />
                 </svg>
 
@@ -106,9 +104,7 @@ function Track() {
                 >
                   Exciting Offers
                 </h2>
-                <p className="leading-relaxed">
-                  We provide amazing offers & discounts
-                </p>
+                <p className="leading-relaxed">We provide amazing discounts.</p>
               </div>
             </div>
           </div>

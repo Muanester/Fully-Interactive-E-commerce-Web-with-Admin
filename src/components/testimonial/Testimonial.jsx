@@ -43,13 +43,13 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  Kamal Nayan Upadhyay
+                  Muanester
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="text-gray-500"
                 >
-                  Senior Product Designer
+                  Customer
                 </p>
               </div>
             </div>
@@ -74,13 +74,13 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Muanester
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="text-gray-500"
                 >
-                  UI Develeoper
+                  Customer
                 </p>
               </div>
             </div>
@@ -105,13 +105,13 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Muanester
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="text-gray-500"
                 >
-                  CTO
+                  Customer
                 </p>
               </div>
             </div>

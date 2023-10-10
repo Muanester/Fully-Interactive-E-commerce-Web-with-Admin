@@ -1,8 +1,46 @@
+import React, { useState } from "react";
+import { storage } from "./firebase";
+import { ref, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
+
+function Upload() {
+  const [imageUpload, setImageUpload] = useState(null);
+  const uploadImage = () => {
+    if (imageUpload == null) return;
+
+    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+    uploadBytes(imageRef, imageUpload).then(() => {
+      alert("Uploaded");
+    });
+  };
+
+  const [imageList, setImageList] = useState([]);
+
+  return (
+    <div>
+      <input
+        onChange={(e) => setProducts({ ...products, imageUrl: e.target.value })}
+        type="file"
+        // onChange={(e) => {
+        //   setImageUpload(e.target.files[0]);
+        // }}
+      />
+      <button onClick={uploadImage}>Upload Image</button>
+
+      {imageList.map((url) => {
+        return <img src={url} />;
+      })}
+    </div>
+  );
+}
+
+/*
+
 import React, { useContext, useEffect, useRef, useState } from "react";
 import myContext from "../../../context/data/myContext";
 import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
-import { storage } from "../../../firebase/firebaseConfig";
+import { storage } from "../../../firebase/FirebaseConfig";
 
 function AddProduct() {
   const context = useContext(myContext);
@@ -14,29 +52,20 @@ function AddProduct() {
 
   const imageListRef = ref(storage, "images/");
 
-  // Add Product Onclick
-  const uploadProduct = () => {
+  const uploadImage = () => {
     if (imageUpload == null) return;
 
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         setImageList((prev) => [...prev, url]);
+        setProducts({ ...products, imageUrl: url });
 
-        // Create a new product object with the imageUrl and other properties
-        const newProduct = {
-          ...products,
-          imageUrl: url,
-        };
+        // products.imageUrl = url;
 
-        // Set the new product object as the state
-        setProducts(newProduct);
-
-        // setTimeout(() => {
-        addProduct(newProduct);
-
-        // }, 2000);
+        // console.log(imageList[0]);
+        console.log(url);
+        console.log(products.imageUrl);
       });
     });
   };
@@ -46,6 +75,7 @@ function AddProduct() {
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageList((prev) => [...prev, url]);
+          // products.imageUrl = url;
         });
       });
     });
@@ -54,7 +84,12 @@ function AddProduct() {
   // Onchange
   const addUpload = (e) => {
     setImageUpload(e.target.files[0]);
-    // setProducts({ ...products, imageUrl: e.target.value });
+  };
+
+  // Add Product Onclick
+  const uploadProduct = () => {
+    uploadImage();
+    addProduct();
   };
 
   return (
@@ -94,6 +129,7 @@ function AddProduct() {
             <input
               type="file"
               accept="image/*"
+              value={products.imageUrl}
               onChange={addUpload}
               name="imageurl"
               className=" bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none"
@@ -140,3 +176,30 @@ function AddProduct() {
 }
 
 export default AddProduct;
+
+
+*/
+
+const uploadProduct = () => {
+  if (imageUpload == null) return;
+
+  const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+
+  uploadBytes(imageRef, imageUpload).then((snapshot) => {
+    getDownloadURL(snapshot.ref).then((url) => {
+      setImageList((prev) => [...prev, url]);
+
+      // Create a new product object with the imageUrl and other properties
+      const newProduct = {
+        ...products,
+        imageUrl: url,
+      };
+
+      // Set the new product object as the state
+      setProducts(newProduct);
+
+      // Upload details();
+      addProduct();
+    });
+  });
+};
