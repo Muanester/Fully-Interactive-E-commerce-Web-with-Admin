@@ -3,17 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6lpZrZpAL6NUDKX1unS_W6_9hHIqBaMw",
-  authDomain: "ecommerce-bdcba.firebaseapp.com",
-  projectId: "ecommerce-bdcba",
-  storageBucket: "ecommerce-bdcba.appspot.com",
-  messagingSenderId: "82505620581",
-  appId: "1:82505620581:web:52f8602f8d5f783a997a8c",
+  apiKey: "AIzaSyD_174aFbya8PI5_uR4I-xV-QV_MsGIlKc",
+  authDomain: "vogue-trends.firebaseapp.com",
+  projectId: "vogue-trends",
+  storageBucket: "vogue-trends.appspot.com",
+  messagingSenderId: "661598983443",
+  appId: "1:661598983443:web:97334de07b0d476c04b6e6",
+  measurementId: "G-EFMVPHVQZH",
 };
 
 // Initialize Firebase

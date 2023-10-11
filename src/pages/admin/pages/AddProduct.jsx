@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import myContext from "../../../context/data/myContext";
 import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
-import { storage } from "../../../firebase/firebaseConfig";
+import { storage } from "../../../firebase/FirebaseConfig";
 
 function AddProduct() {
   const context = useContext(myContext);

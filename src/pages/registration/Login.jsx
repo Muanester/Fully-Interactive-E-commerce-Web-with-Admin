@@ -18,7 +18,7 @@ function Login() {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       localStorage.setItem("user", JSON.stringify(result));
-      toast.success("Signin Successfully", {
+      toast.success("Login Successfull", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -28,7 +28,9 @@ function Login() {
         progress: undefined,
         theme: "colored",
       });
-      window.location.href = "/";
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000);
       setLoading(false);
     } catch (error) {
       toast.error("Login Failed, Username or Password is Incorrect", {
@@ -83,7 +85,7 @@ function Login() {
         </div>
         <div>
           <h2 className="text-white">
-            Don't have an account{" "}
+            Don't have an account?{" "}
             <Link className=" text-yellow-500 font-bold" to={"/signup"}>
               Signup
             </Link>

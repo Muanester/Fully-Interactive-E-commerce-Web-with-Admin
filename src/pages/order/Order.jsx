@@ -7,12 +7,21 @@ function Order() {
   const userid = JSON.parse(localStorage.getItem("user")).user.uid;
   const context = useContext(myContext);
   const { mode, loading, order } = context;
+
   return (
     <Layout>
       {loading && <Loader />}
       {order.length > 0 ? (
         <>
           <div className=" h-full pt-10">
+            <h1
+              className="text-xl font-bold text-gray-900 text-center mb-3 mt-3"
+              style={{
+                color: mode === "dark" ? "white" : "",
+              }}
+            >
+              Ordered Items:
+            </h1>
             {order
               .filter((obj) => obj.userid == userid)
               .map((order) => {
@@ -59,6 +68,14 @@ function Order() {
                                   }}
                                 >
                                   KSH. {item.price}
+                                </p>
+                                <p
+                                  className="mt-2 font-bold text-xs text-gray-400 text-end"
+                                  style={{
+                                    color: mode === "dark" ? "white" : "",
+                                  }}
+                                >
+                                  {item.date}
                                 </p>
                               </div>
                             </div>

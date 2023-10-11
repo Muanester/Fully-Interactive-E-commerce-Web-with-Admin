@@ -13,7 +13,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { fireDB } from "../../firebase/firebaseConfig";
+import { fireDB } from "../../firebase/FirebaseConfig";
 
 function MyState(props) {
   const [mode, setMode] = useState("light");
@@ -120,7 +120,7 @@ function MyState(props) {
     setProducts("");
   };
 
-  const deleteProduct = async (item) => {
+  const deleteProduct = async (item, index) => {
     try {
       setLoading(true);
       await deleteDoc(doc(fireDB, "products", item.id));

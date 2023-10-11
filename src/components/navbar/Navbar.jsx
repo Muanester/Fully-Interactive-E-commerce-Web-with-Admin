@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { RxCross2 } from "react-icons/rx";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,19 @@ function Navbar() {
 
   const logout = () => {
     localStorage.clear("user");
-    window.location.href = "/login";
+    toast.success("Logged out!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 2000);
   };
 
   const cartItems = useSelector((state) => state.cart);
@@ -73,6 +86,18 @@ function Navbar() {
                     All Products
                   </Link>
 
+                  {!user ? (
+                    <Link
+                      to={"/login"}
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Login
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+
                   {user ? (
                     <div className="flow-root">
                       <Link
@@ -115,18 +140,18 @@ function Navbar() {
                     ""
                   )}
 
-                  <div className="flow-root">
+                  {/* <div className="flow-root">
                     <Link
                       to={"/"}
                       className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
                     >
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
-                        alt="Dan_Abromov"
+                        src=""
+                        alt="User"
                       />{" "}
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -189,7 +214,7 @@ function Navbar() {
                       className=" text-2xl font-bold text-black  px-2 py-1 rounded"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      Vogue trends
+                      Vogue Trends
                     </h1>
                   </div>
                 </Link>

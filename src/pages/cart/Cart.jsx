@@ -6,10 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteFromCart } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
 import { addDoc, collection } from "firebase/firestore";
-import { fireDB } from "../../firebase/firebaseConfig";
 import { loadScript } from "@paypal/paypal-js";
+import { fireDB } from "../../firebase/FirebaseConfig";
 
 function Cart() {
+  const user = JSON.parse(localStorage.getItem("user"));
   const context = useContext(myContext);
   const { mode } = context;
 
@@ -35,7 +36,10 @@ function Cart() {
     setTotalAmount(temp);
   }, [cartItems]);
 
-  const shipping = parseInt(100);
+  let shipping = 0;
+  if (totalAmount > 0) {
+    shipping = parseInt(100);
+  }
 
   const grandTotal = shipping + totalAmount;
 
@@ -82,7 +86,8 @@ function Cart() {
       }),
     };
 
-    const paymentId = "Order";
+    const paymentId = new Date().getTime();
+
     const orderInfo = {
       cartItems,
       addressInfo,
@@ -98,7 +103,7 @@ function Cart() {
 
     try {
       addDoc(collection(fireDB, "orders"), orderInfo);
-      toast.success("Order Successful");
+      toast.success("Order Placed");
       localStorage.removeItem("cart");
 
       setTimeout(() => {
@@ -170,13 +175,13 @@ function Cart() {
     <Layout>
       {/* <div id="your-container-element"></div> */}
       <div
-        className="h-screen bg-gray-100 pt-5 mb-[60%]"
+        className="h-auto bg-gray-100 pt-5 mb-0 pb-10"
         style={{
           backgroundColor: mode === "dark" ? "#282c34" : "",
           color: mode === "dark" ? "white" : "",
         }}
       >
-        <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+        <h1 className="mb-10 text-center text-2xl font-bold">Cart Items:</h1>
         <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0 ">
           <div className="rounded-lg md:w-2/3 ">
             {cartItems.map((item, index) => {
@@ -292,19 +297,19 @@ function Cart() {
                 </p>
               </div>
             </div>
-            {/* <Modal  /> */}
-
-            <Modal
-              name={name}
-              address={address}
-              pincode={pincode}
-              phoneNumber={phoneNumber}
-              setName={setName}
-              setAddress={setAddress}
-              setPincode={setPincode}
-              setPhoneNumber={setPhoneNumber}
-              buyNow={buyNow}
-            />
+            {user && (
+              <Modal
+                name={name}
+                address={address}
+                pincode={pincode}
+                phoneNumber={phoneNumber}
+                setName={setName}
+                setAddress={setAddress}
+                setPincode={setPincode}
+                setPhoneNumber={setPhoneNumber}
+                buyNow={buyNow}
+              />
+            )}
           </div>
         </div>
       </div>
