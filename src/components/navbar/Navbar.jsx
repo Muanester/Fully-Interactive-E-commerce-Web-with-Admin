@@ -29,7 +29,7 @@ function Navbar() {
     });
     setTimeout(() => {
       window.location.href = "/";
-    }, 2000);
+    }, 2001);
   };
 
   const cartItems = useSelector((state) => state.cart);
