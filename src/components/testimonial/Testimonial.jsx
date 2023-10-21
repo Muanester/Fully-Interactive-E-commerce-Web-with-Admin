@@ -103,9 +103,8 @@ function Testimonial() {
                   compartments and 4 pockets. It has lots of space to carry your
                   entire world inside it. The pretty golden chain enhances its
                   beauty to another level. It has a very chic and classy look.
-                  You can use it as a handbag and also a sling bag. The quality
-                  of the leather is very good and the inner material is also so
-                  thick that you can carry your heavy staffs too.
+                  The quality of the leather is very good and the inner material
+                  is also so thick that you can carry your heavy staffs too.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
