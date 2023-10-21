@@ -58,7 +58,7 @@ function App() {
               </ProtectedRoutesForAdmin>
             }
           />
-          <Route path="/*" element={<NoPage />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
         <ToastContainer />
       </Router>
