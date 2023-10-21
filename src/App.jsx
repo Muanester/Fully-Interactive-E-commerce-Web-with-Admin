@@ -20,7 +20,7 @@ function App() {
     <MyState>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route
             path="/order"
             element={
