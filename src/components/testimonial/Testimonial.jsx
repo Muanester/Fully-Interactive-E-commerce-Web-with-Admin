@@ -27,16 +27,19 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://ecommerce-sk.vercel.app/img/kamal.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2763/2763444.png"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  This bag is so beautiful and very stylish. Its has 3
+                  compartments and 4 pockets. It has lots of space to carry your
+                  entire world inside it. The pretty golden chain enhances its
+                  beauty to another level. It has a very chic and classy look.
+                  You can use it as a handbag and also a sling bag. The quality
+                  of the leather is very good and the inner material is also so
+                  thick that you can carry your heavy staffs too.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
@@ -64,10 +67,13 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  This bag is so beautiful and very stylish. Its has 3
+                  compartments and 4 pockets. It has lots of space to carry your
+                  entire world inside it. The pretty golden chain enhances its
+                  beauty to another level. It has a very chic and classy look.
+                  You can use it as a handbag and also a sling bag. The quality
+                  of the leather is very good and the inner material is also so
+                  thick that you can carry your heavy staffs too.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
@@ -89,16 +95,19 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://webknudocs.vercel.app/logo/react.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2763/2763444.png"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  This bag is so beautiful and very stylish. Its has 3
+                  compartments and 4 pockets. It has lots of space to carry your
+                  entire world inside it. The pretty golden chain enhances its
+                  beauty to another level. It has a very chic and classy look.
+                  You can use it as a handbag and also a sling bag. The quality
+                  of the leather is very good and the inner material is also so
+                  thick that you can carry your heavy staffs too.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
