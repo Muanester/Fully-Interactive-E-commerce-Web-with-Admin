@@ -5,8 +5,10 @@ import Layout from "../../components/layout/Layout";
 import myContext from "../../context/data/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import all_product from "../../assets/ProductsDetails";
 
 function Allproducts() {
+  console.log(all_product);
   const context = useContext(myContext);
   const {
     mode,
@@ -50,7 +52,7 @@ function Allproducts() {
           </div>
 
           <div className="flex flex-wrap -m-4">
-            {product
+            {all_product
               .filter((obj) => obj.title.toLowerCase().includes(searchkey))
               .filter((obj) => obj.category.includes(filterType))
               .filter((obj) => obj.price.includes(filterPrice))

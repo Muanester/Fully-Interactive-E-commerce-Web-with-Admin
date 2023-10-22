@@ -7,6 +7,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { addToCart } from "../../redux/cartSlice";
 import { fireDB } from "../../firebase/FirebaseConfig";
+import all_product from "../../assets/ProductsDetails";
 
 function ProductInfo() {
   const context = useContext(myContext);
@@ -18,10 +19,12 @@ function ProductInfo() {
 
   const getProductData = async () => {
     setLoading(true);
+
     try {
-      const productTemp = await getDoc(doc(fireDB, "products", params.id));
+      // const productTemp = () => all_product[params.id];
+      // const productTemp = await getDoc(doc(fireDB, "products", params.id));
       // console.log(productTemp)
-      setProducts(productTemp.data());
+      setProducts(all_product[params.id - 1]);
       // console.log(productTemp.data())
       setLoading(false);
     } catch (error) {

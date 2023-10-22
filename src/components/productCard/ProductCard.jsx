@@ -3,6 +3,7 @@ import myContext from "../../context/data/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
+import all_product from "../../assets/ProductsDetails";
 
 function ProductCard() {
   const context = useContext(myContext);
@@ -42,7 +43,7 @@ function ProductCard() {
         </div>
 
         <div className="flex flex-wrap -m-4">
-          {product
+          {all_product
             .filter((obj) => obj.title.toLowerCase().includes(searchkey))
             .filter((obj) => obj.category.includes(filterType))
             .filter((obj) => obj.price.includes(filterPrice))
