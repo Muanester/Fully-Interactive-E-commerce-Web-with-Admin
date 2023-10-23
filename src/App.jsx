@@ -15,51 +15,76 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AllProducts from "./pages/allproducts/AllProducts";
 
+// function App() {
+//   return (
+//     <MyState>
+//       <Router>
+//         <Routes>
+//           <Route path="/*" element={<Home />} />
+//           <Route
+//             path="/order"
+//             element={
+//               <ProtectedRoutes>
+//                 <Order />
+//               </ProtectedRoutes>
+//             }
+//           />
+//           <Route path="/cart" element={<Cart />} />
+//           <Route
+//             path="/dashboard"
+//             element={
+//               <ProtectedRoutesForAdmin>
+//                 <Dashboard />
+//               </ProtectedRoutesForAdmin>
+//             }
+//           />
+//           <Route path="/login" element={<Login />} />
+//           <Route path="/signup" element={<Signup />} />
+//           <Route path="/allproducts" element={<AllProducts />} />
+//           <Route path="/productinfo" element={<ProductInfo />}>
+//             <Route path=":id" element={<ProductInfo />} />
+//           </Route>
+//           <Route
+//             path="/addproduct"
+//             element={
+//               <ProtectedRoutesForAdmin>
+//                 <AddProduct />
+//               </ProtectedRoutesForAdmin>
+//             }
+//           />
+//           <Route
+//             path="/updateproduct"
+//             element={
+//               <ProtectedRoutesForAdmin>
+//                 <UpdateProduct />
+//               </ProtectedRoutesForAdmin>
+//             }
+//           />
+//           {/* <Route path="/*" element={<NoPage />} /> */}
+//         </Routes>
+//         <ToastContainer />
+//       </Router>
+//     </MyState>
+//   );
+// }
+
 function App() {
   return (
     <MyState>
       <Router>
         <Routes>
           <Route path="/*" element={<Home />} />
-          <Route
-            path="/order"
-            element={
-              <ProtectedRoutes>
-                <Order />
-              </ProtectedRoutes>
-            }
-          />
+          <Route path="/order" element={<Order />} />
           <Route path="/cart" element={<Cart />} />
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoutesForAdmin>
-                <Dashboard />
-              </ProtectedRoutesForAdmin>
-            }
-          />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/productinfo" element={<ProductInfo />}>
             <Route path=":id" element={<ProductInfo />} />
           </Route>
-          <Route
-            path="/addproduct"
-            element={
-              <ProtectedRoutesForAdmin>
-                <AddProduct />
-              </ProtectedRoutesForAdmin>
-            }
-          />
-          <Route
-            path="/updateproduct"
-            element={
-              <ProtectedRoutesForAdmin>
-                <UpdateProduct />
-              </ProtectedRoutesForAdmin>
-            }
-          />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/updateproduct" element={<UpdateProduct />} />
           {/* <Route path="/*" element={<NoPage />} /> */}
         </Routes>
         <ToastContainer />
