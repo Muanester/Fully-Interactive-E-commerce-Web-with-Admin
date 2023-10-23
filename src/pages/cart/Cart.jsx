@@ -297,7 +297,7 @@ function Cart() {
                 </p>
               </div>
             </div>
-            {user && (
+            {
               <Modal
                 name={name}
                 address={address}
@@ -309,7 +309,7 @@ function Cart() {
                 setPhoneNumber={setPhoneNumber}
                 buyNow={buyNow}
               />
-            )}
+            }
           </div>
         </div>
       </div>

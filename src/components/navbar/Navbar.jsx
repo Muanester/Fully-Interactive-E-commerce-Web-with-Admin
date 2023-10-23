@@ -86,7 +86,7 @@ function Navbar() {
                     All Products
                   </Link>
 
-                  {!user ? (
+                  {
                     <Link
                       to={"/login"}
                       className="-m-2 block p-2 font-medium text-gray-900"
@@ -94,11 +94,9 @@ function Navbar() {
                     >
                       Login
                     </Link>
-                  ) : (
-                    ""
-                  )}
+                  }
 
-                  {user ? (
+                  {
                     <div className="flow-root">
                       <Link
                         to={"/order"}
@@ -108,11 +106,9 @@ function Navbar() {
                         Order
                       </Link>
                     </div>
-                  ) : (
-                    ""
-                  )}
+                  }
 
-                  {user?.user?.email === "muanester@gmail.com" ? (
+                  {/* {user?.user?.email === "muanester@gmail.com" ? (
                     <div className="flow-root">
                       <Link
                         to={"/dashboard"}
@@ -124,9 +120,21 @@ function Navbar() {
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
 
-                  {user ? (
+                  {
+                    <div className="flow-root">
+                      <Link
+                        to={"/dashboard"}
+                        className="-m-2 block p-2 font-medium text-gray-900"
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                      >
+                        Admin
+                      </Link>
+                    </div>
+                  }
+
+                  {
                     <div className="flow-root">
                       <a
                         onClick={logout}
@@ -136,9 +144,7 @@ function Navbar() {
                         Logout
                       </a>
                     </div>
-                  ) : (
-                    ""
-                  )}
+                  }
 
                   {/* <div className="flow-root">
                     <Link
@@ -230,7 +236,7 @@ function Navbar() {
                     All Products
                   </Link>
 
-                  {!user ? (
+                  {
                     <Link
                       to={"/login"}
                       className="text-sm font-medium text-gray-700 "
@@ -238,11 +244,9 @@ function Navbar() {
                     >
                       Login
                     </Link>
-                  ) : (
-                    ""
-                  )}
+                  }
 
-                  {user ? (
+                  {
                     <Link
                       to={"/order"}
                       className="text-sm font-medium text-gray-700 "
@@ -250,11 +254,9 @@ function Navbar() {
                     >
                       Order
                     </Link>
-                  ) : (
-                    ""
-                  )}
+                  }
 
-                  {user?.user?.email === "muanester@gmail.com" ? (
+                  {
                     <Link
                       to={"/dashboard"}
                       className="text-sm font-medium text-gray-700 "
@@ -262,11 +264,9 @@ function Navbar() {
                     >
                       Admin
                     </Link>
-                  ) : (
-                    ""
-                  )}
+                  }
 
-                  {user ? (
+                  {
                     <a
                       onClick={logout}
                       className="text-sm font-medium text-gray-700 cursor-pointer  "
@@ -274,9 +274,7 @@ function Navbar() {
                     >
                       Logout
                     </a>
-                  ) : (
-                    ""
-                  )}
+                  }
                 </div>
 
                 {/* <div className="hidden lg:ml-8 lg:flex">

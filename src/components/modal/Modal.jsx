@@ -62,13 +62,7 @@ export default function Modal({
                         className="flex flex-col items-center mb-6 mt-6 text-2xl
                         font-semibold text-gray-900 dark:text-white"
                       >
-                        Pay & Order Below:
-                        <img
-                          className="w-100 h-50 mb-2 mt-2"
-                          src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/mpesa-design-template-9b7d53aeb8c34346d66fd94df76459dd_screen.jpg?ts=1600410836"
-                          alt="logo"
-                        />
-                        Vogue Trends
+                        Pay & Order Below: Vogue Trends
                       </div>
                       <div className="w-full  rounded-lg md:mt-0 sm:max-w-md xl:p-0 ">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -113,7 +107,6 @@ export default function Modal({
                           </form>
                           <button
                             onClick={() => {
-                              buyNow();
                               closeModal();
                             }}
                             type="button"

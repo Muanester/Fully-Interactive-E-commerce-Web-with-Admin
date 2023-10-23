@@ -3,6 +3,7 @@ import myContext from "../../../context/data/myContext";
 import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 import { storage } from "../../../firebase/FirebaseConfig";
+import { Link } from "react-router-dom";
 
 function AddProduct() {
   const context = useContext(myContext);
@@ -126,12 +127,11 @@ function AddProduct() {
             ></textarea>
           </div>
           <div className=" flex justify-center mb-3">
-            <button
-              onClick={uploadProduct}
-              className=" bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg"
-            >
-              Add Product
-            </button>
+            <Link to={"/dashboard"}>
+              <button className=" bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg">
+                Add Product
+              </button>
+            </Link>
           </div>
         </div>
       </div>

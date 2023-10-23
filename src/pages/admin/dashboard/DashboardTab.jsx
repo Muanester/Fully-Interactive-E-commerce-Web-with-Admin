@@ -6,6 +6,7 @@ import { FaUser, FaCartPlus } from "react-icons/fa";
 import { AiFillShopping, AiFillPlusCircle, AiFillDelete } from "react-icons/ai";
 import UpdateProduct from "../pages/UpdateProduct";
 import { Link } from "react-router-dom";
+import all_product from "../../../assets/ProductsDetails";
 
 function DashboardTab() {
   const context = useContext(myContext);
@@ -124,7 +125,7 @@ function DashboardTab() {
                       </tr>
                     </thead>
 
-                    {product.map((item, index) => {
+                    {all_product.map((item, index) => {
                       const {
                         title,
                         price,
@@ -197,11 +198,7 @@ function DashboardTab() {
                                     color: mode === "dark" ? "white" : "",
                                   }}
                                 >
-                                  <div
-                                    onClick={() => {
-                                      deleteProduct(item);
-                                    }}
-                                  >
+                                  <div onClick={() => {}}>
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
                                       fill="none"
