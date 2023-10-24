@@ -8,6 +8,7 @@ import {
 import myContext from "../../../context/data/myContext";
 import Layout from "../../../components/layout/Layout";
 import DashboardTab from "./DashboardTab";
+import all_product from "../../../assets/ProductsDetails";
 
 function Dashboard() {
   const context = useContext(myContext);
@@ -36,7 +37,7 @@ function Dashboard() {
                   className="title-font font-medium text-3xl text-black fonts1"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  {product.length}
+                  {all_product.length}
                 </h2>
                 <p
                   className=" text-purple-500  font-bold"
@@ -64,7 +65,7 @@ function Dashboard() {
                   className="title-font font-medium text-3xl text-black fonts1"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  {order.length}
+                  4
                 </h2>
                 <p
                   className=" text-purple-500  font-bold"

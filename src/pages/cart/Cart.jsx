@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { addDoc, collection } from "firebase/firestore";
 import { loadScript } from "@paypal/paypal-js";
 import { fireDB } from "../../firebase/FirebaseConfig";
+import all_product from "../../assets/ProductsDetails";
 
 function Cart() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -29,7 +30,7 @@ function Cart() {
 
   const [totalAmount, setTotalAmount] = useState(0);
   useEffect(() => {
-    let temp = 0;
+    let temp = 80000;
     cartItems.forEach((cartItem) => {
       temp = temp + parseInt(cartItem.price);
     });
@@ -184,7 +185,7 @@ function Cart() {
         <h1 className="mb-10 text-center text-2xl font-bold">Cart Items:</h1>
         <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0 ">
           <div className="rounded-lg md:w-2/3 ">
-            {cartItems.map((item, index) => {
+            {all_product.map((item, index) => {
               const { title, price, description, imageUrl } = item;
               return (
                 <div

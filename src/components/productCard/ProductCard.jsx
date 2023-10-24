@@ -59,9 +59,9 @@ function ProductCard() {
                     }}
                   >
                     <div
-                      onClick={() =>
-                        (window.location.href = `/productinfo/${id}`)
-                      }
+                      // onClick={() =>
+                      //   (window.location.href = `/productinfo/${id}`)
+                      // }
                       className="flex justify-center cursor-pointer"
                     >
                       <img

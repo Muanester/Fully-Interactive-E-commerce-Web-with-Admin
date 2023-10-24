@@ -43,13 +43,13 @@ function ProductInfo() {
 
   // add to cart
   const addCart = (products) => {
-    dispatch(addToCart(products));
+    // dispatch(addToCart(products));
     toast.success("Added to cart");
   };
 
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
+  // useEffect(() => {
+  //   localStorage.setItem("cart", JSON.stringify(cartItems));
+  // }, [cartItems]);
 
   return (
     <Layout>

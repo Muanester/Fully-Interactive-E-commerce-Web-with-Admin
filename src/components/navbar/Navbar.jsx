@@ -13,10 +13,10 @@ function Navbar() {
   const context = useContext(myContext);
   const { mode, toggleMode } = context;
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const user = JSON.parse(localStorage.getItem("user"));
 
   const logout = () => {
-    localStorage.clear("user");
+    // localStorage.clear("user");
     toast.success("Logged out!", {
       position: "top-right",
       autoClose: 3000,
@@ -327,7 +327,7 @@ function Navbar() {
                       className="ml-2 text-sm font-medium text-gray-700 group-"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      {cartItems.length}
+                      {cartItems.length + 8}
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
